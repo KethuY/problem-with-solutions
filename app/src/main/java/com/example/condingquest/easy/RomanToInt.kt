@@ -1,20 +1,6 @@
 package com.example.condingquest.easy
-val romanMap:HashMap<String,Int> = HashMap()
 
 fun main(){
-    romanMap["I"] = 1
-    romanMap["V"] = 5
-    romanMap["X"] = 10
-    romanMap["L"] = 50
-    romanMap["C"] = 100
-    romanMap["D"] = 500
-    romanMap["M"] = 1000
-    romanMap["IV"] = 4
-    romanMap["IX"] = 9
-    romanMap["XL"] = 40
-    romanMap["XC"] = 90
-    romanMap["CD"] = 400
-    romanMap["CM"] = 900
     println(romanToInt("MCMXCIV"))
 }
 

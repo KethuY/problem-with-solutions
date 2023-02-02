@@ -1,4 +1,4 @@
-package com.example.condingquest.dsaa
+package com.example.condingquest.dsaa.alogorithims
 
 fun main() {
     val data = intArrayOf(8, 7, 6, 4, 2)

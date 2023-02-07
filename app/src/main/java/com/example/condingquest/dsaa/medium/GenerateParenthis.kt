@@ -1,4 +1,4 @@
-package com.example.condingquest.medium
+package com.example.condingquest.dsaa.medium
 
 var generatedParenthis = arrayListOf<String>()
 

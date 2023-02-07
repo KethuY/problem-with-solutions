@@ -1,4 +1,4 @@
-package com.example.condingquest.easy
+package com.example.condingquest.dsaa.easy
 
 import java.util.*
 

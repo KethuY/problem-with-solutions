@@ -1,4 +1,4 @@
-package com.example.condingquest.easy
+package com.example.condingquest.dsaa.easy
 
 fun main() {
     val numberArray = intArrayOf(2, 7, 11, 15,5,4)

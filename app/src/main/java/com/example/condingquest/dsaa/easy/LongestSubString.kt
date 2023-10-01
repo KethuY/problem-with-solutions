@@ -1,4 +1,4 @@
-package com.example.condingquest.dsaa
+package com.example.condingquest.dsaa.easy
 
 fun main() {
     println(lengthOfLongestSubstring("pwwkew"))

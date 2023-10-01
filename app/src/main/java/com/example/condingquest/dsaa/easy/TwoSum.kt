@@ -30,6 +30,5 @@ fun twoSum(nums: IntArray, target: Int): List<Int> {
         }
     }
     // In case there is no solution, we'll just return null
-    // In case there is no solution, we'll just return null
     return indexes
 }

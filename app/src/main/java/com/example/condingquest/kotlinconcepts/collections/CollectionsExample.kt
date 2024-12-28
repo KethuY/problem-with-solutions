@@ -106,7 +106,7 @@ fun main3() {
     }
     }
 
-fun main(){
+fun main4(){
     val numbers = listOf("one", "two", "three", "four")
 
     println(numbers)
@@ -116,10 +116,18 @@ fun main(){
     numbers.joinTo(listString)
     println(listString)
 
-    val numbers1 = listOf("one", "two", "three", "four", "five", "six")
+    val numbers1 = listOfNotNull("one", "two", "three", "four", "five", "six","", null)
     println(numbers1.takeWhile { !it.startsWith('f') })
     println(numbers1.takeLastWhile { it != "three" })
     println(numbers1.dropWhile { it.length == 3 })
     println(numbers1.dropLastWhile { it.contains('i') })
+    println(numbers1.takeIf { it.isNotEmpty() })
+}
+
+fun main() {
+    val numbers = listOf("one", "two", "three", "four")
+    println("${numbers.asReversed()}")
+    println("${numbers.asReversed().map { it.uppercase() }}")
+    println("${numbers.subList(1,3)}")
 }
 

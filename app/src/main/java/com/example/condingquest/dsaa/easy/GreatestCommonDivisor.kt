@@ -8,4 +8,5 @@ fun main() {
     println(gcd(25, 10)) // should print 5
     println(gcd(25, 0)) // should print 5
     println(gcd(36, 12)) // should print 5
+    println(gcd(48, 72)) // should print 5
 }

@@ -16,7 +16,6 @@ fun main() {
 
 fun removeElement(nums: List<Int>, element: Int): Pair<Int, List<Any>> {
     val list = nums.filter { it != element }
-
     val sizeDifference = (nums.size - list.size)
     val result = arrayListOf<Any>()
     result.addAll(list)

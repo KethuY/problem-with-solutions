@@ -1,5 +1,6 @@
 package com.example.condingquest.kotlinconcepts.idioms
 
+import java.math.RoundingMode
 import java.text.DecimalFormat
 import java.text.DecimalFormatSymbols
 import java.util.Locale
@@ -10,16 +11,40 @@ fun main() {
     var a = 1
     var b = 2
     a = b.also { b = a }
-   // println(" $a & $b")
+   println(" $a & $b")
 
-   /* println("Formatted Amount: ${amountFormatterWithoutRound(1234567.891234)}")
-    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.06)}")
-    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.788)}")
-    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.01)}")
-    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.0)}")
- */   println("Formatted Amount: ${amountFormatterWithoutRound(359.306012)}")
-    println("Formatted Amount original: ${formateAmount(359.306012)}")
+    println(" ************************ truncating with 100")
+    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.891234)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.062)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.783)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.014)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(1234567.05)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(359.306012)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(359.307012)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(359.308012)}")
+    println("Formatted Amount: ${amountFormatterWithoutRound(359.309012)}")
+
+
+    println("&&&&&&&&&&&&&&&&&&")
+
+    println("Formatted Amount: ${amountFormatterDown(1234567.891234)}")
+    println("Formatted Amount: ${amountFormatterDown(1234567.062)}")
+    println("Formatted Amount: ${amountFormatterDown(1234567.783)}")
+    println("Formatted Amount: ${amountFormatterDown(1234567.014)}")
+    println("Formatted Amount: ${amountFormatterDown(1234567.055)}")
+    println("Formatted Amount: ${amountFormatterDown(359.30601287)}")
+    println("Formatted Amount: ${amountFormatterDown(359.307012)}")
+    println("Formatted Amount: ${amountFormatterDown(359.308012)}")
+    println("Formatted Amount: ${amountFormatterDown(359.309012)}")
 }
+
+
+fun amountFormatterDown(amount: Double): String {
+    val formatter = DecimalFormat("###,###,###.##", DecimalFormatSymbols.getInstance(Locale.ENGLISH))
+    formatter.roundingMode = RoundingMode.DOWN
+    return formatDecimalPoint(formatter.format(amount))
+}
+
 
 fun amountFormatterWithoutRound(amount: Double): String {
     val truncated: Double = ((amount * 100).toLong()) / 100.0
